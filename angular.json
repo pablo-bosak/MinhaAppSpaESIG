@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "eSig": {
+    "e-sig": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -40,7 +40,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/eSig",
+            "outputPath": "dist/e-sig",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -88,22 +88,22 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "eSig:build"
+            "browserTarget": "e-sig:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "eSig:build:production"
+              "browserTarget": "e-sig:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "eSig:build"
+            "browserTarget": "e-sig:build"
           }
         }
       }
     }
   },
-  "defaultProject": "eSig"
+  "defaultProject": "e-sig"
 }
