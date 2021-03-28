@@ -1,0 +1,49 @@
+<div class="container main-container">
+    <h4>Concluir Tarefa 1 </h4>
+    <br>
+    <h5>Você tem certeza disso?</h5>
+
+    <div class="row">
+        <div class="col-md-6">
+            <dl>
+                <dt>
+                    Título
+                </dt>
+                <dd>
+                    {{ tarefa.id }}
+                </dd>
+                <dt>
+                    Descrição
+                </dt>
+                <dd>
+                    {{tarefa.descricao}}
+                </dd>
+                <dt>
+                    Responsável
+                </dt>
+                <dd>
+                    {{tarefa.responsavel}}
+                </dd>
+                <dt>
+                    Situação
+                </dt>
+                <dd>
+                    {{tarefa.situacao}}
+                </dd>
+                <dt>
+                    Deadline
+                </dt>
+                <dd>
+                    {{tarefa.deadline}}
+                </dd>
+            </dl>
+
+            <div>
+                <a href="javascript:void(0)" class="btn btn-danger" (click)="concluir()">Concluir</a>&nbsp;
+                <a class="btn btn-info" href="javascript:window.history.back();">Voltar</a>
+            </div>
+            
+        </div>
+    </div>
+
+</div>

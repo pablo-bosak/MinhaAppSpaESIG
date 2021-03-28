@@ -1,0 +1,54 @@
+<div class="container main-container">
+
+    <h3>Cadastrar Tarefa</h3>
+
+    <hr>
+    <div class="row">
+        <div class="col-md-10">
+            <form enctype="multipart/form-data" [formGroup]="cadastroForm" (ngSubmit)="cadastrar()">
+
+                <div class="form-group">
+                    <label class="control-label">Título</label>
+                    <div>
+                        <input class="form-control" id="nome" type="text" placeholder="Nome (requerido)" formControlName="titulo"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">Descrição</label>
+                    <div>
+                        <textarea cols="40" rows="5" maxlength="1000" class="form-control" id="descricao" placeholder="Descrição (requerido)" formControlName="descricao"></textarea>                 
+                    </div>
+                </div>
+
+                <div class="form-group" class="row" style="margin-bottom: 16px;">
+                    <div class="col-md-4 nopadding">
+                        <label class="control-label">Responsável</label>
+                        <select class="form-control" id="responsavelId" formControlName="responsavel" >
+                            <option *ngFor="let responsavel of responsaveis">{{ responsavel.nome }}</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 nopadding">
+                        <label class="control-label">Prioridade</label>
+                        <select class="form-control" id="prioridade" formControlName="prioridade">
+                            <option *ngFor="let prioridade of prioridades">{{ prioridade.nome }}</option>
+                        </select>
+                     </div>
+                </div>
+
+                <div class="form-group" class="row" style="margin-bottom: 16px;">
+                    <div class="col-md-4 nopadding">
+                        <label class="control-label">Deadline</label>
+                        <input class="form-control"  type="date" id="deadline" name="deadline" formControlName="deadline">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="submit" value="Cadastrar" class="btn btn-primary">&nbsp;
+                    <a class="btn btn-info" href="/lista">Voltar</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
